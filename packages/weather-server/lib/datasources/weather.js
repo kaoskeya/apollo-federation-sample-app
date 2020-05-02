@@ -5,12 +5,10 @@ const weather = async (latitude, longitude) => {
     const woeResponse = await fetch(`https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`);
     const woeJson = await woeResponse.json();
 
-    console.log(woeJson);
-
     const weatherResponse = await fetch(`https://www.metaweather.com/api/location/${woeJson[0].woeid}`);
-    console.log(weatherResponse);
+    const weatherJson = await weatherResponse.json();
 
-    return weatherResponse.json();
+    return weatherJson[0];
   } catch (e) {
     // log to a service for further inspection
     return {
