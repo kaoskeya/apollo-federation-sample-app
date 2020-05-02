@@ -1,6 +1,6 @@
 {
   "name": "geocoder-server",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "code to convert location to geo code",
   "author": "Karthikeyan S <k@kaos.agency>",
   "homepage": "https://github.com/kaoskeya/apollo-federation-sample-app#readme",
@@ -32,6 +32,6 @@
     "apollo-server-lambda": "^2.12.0",
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
-    "weather-server": "^0.0.5"
+    "weather-server": "^0.0.6"
   }
 }
