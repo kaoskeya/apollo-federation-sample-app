@@ -12,6 +12,13 @@ functions:
           path: geocoder
           method: post
           cors: true
+  weather:
+    handler: servers.weatherServer
+    events:
+      - http:
+          path: weather
+          method: post
+          cors: true
 
 plugins:
   - serverless-offline

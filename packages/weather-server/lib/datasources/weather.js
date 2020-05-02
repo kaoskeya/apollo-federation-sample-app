@@ -1,11 +1,15 @@
 const fetch = require("node-fetch");
 
-const geocoder = async (latitude, longitude) => {
+const weather = async (latitude, longitude) => {
   try {
     const woeResponse = await fetch(`https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`);
     const woeJson = await woeResponse.json();
 
+    console.log(woeJson);
+
     const weatherResponse = await fetch(`https://www.metaweather.com/api/location/${woeJson[0].woeid}`);
+    console.log(weatherResponse);
+
     return weatherResponse.json();
   } catch (e) {
     // log to a service for further inspection
@@ -18,4 +22,4 @@ const geocoder = async (latitude, longitude) => {
   }
 };
 
-module.exports = geocoder;
+module.exports = weather;

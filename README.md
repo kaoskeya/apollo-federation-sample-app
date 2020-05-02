@@ -5,6 +5,7 @@
 **_ensure serverless is installed globally._**
 
 ```
+lerna bootstrap
 cd packages/serverless-app
 yarn start
 ```
