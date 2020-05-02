@@ -1,6 +1,6 @@
 {
   "name": "serverless-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Karthikeyan S <k@kaos.agency>",
   "homepage": "https://github.com/kaoskeya/apollo-federation-sample-app#readme",
@@ -25,8 +25,8 @@
     "url": "https://github.com/kaoskeya/apollo-federation-sample-app/issues"
   },
   "dependencies": {
-    "geocoder-server": "^0.0.0",
-    "weather-server": "^0.0.0"
+    "geocoder-server": "^0.0.1",
+    "weather-server": "^0.0.1"
   },
   "devDependencies": {
     "serverless-offline": "^6.1.4"
