@@ -5,6 +5,20 @@ provider:
   runtime: nodejs12.x
   region: ap-south-1
   stage: ${opt:stage, 'dev'}
+  environment:
+    STAGE: ${self:provider.stage}
+    BASE_URL:
+      {
+        "Fn::Join":
+          [
+            "",
+            [
+              " https://",
+              { "Ref": "ApiGatewayRestApi" },
+              ".execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}",
+            ],
+          ],
+      }
 
 functions:
   geocoder:
@@ -14,12 +28,20 @@ functions:
           path: /geocoder
           method: post
           cors: true
+      - http:
+          path: /geocoder
+          method: get
+          cors: true
   weather:
     handler: servers.weatherServer
     events:
       - http:
           path: /weather
           method: post
+          cors: true
+      - http:
+          path: /weather
+          method: get
           cors: true
   gateway:
     handler: servers.gatewayServer
@@ -28,20 +50,10 @@ functions:
           path: /
           method: post
           cors: true
-
-environment:
-  BASE_URL:
-    {
-      "Fn::Join":
-        [
-          "",
-          [
-            " https://",
-            { "Ref": "ApiGatewayRestApi" },
-            ".execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}",
-          ],
-        ],
-    }
+      - http:
+          path: /
+          method: get
+          cors: true
 
 plugins:
   - serverless-offline

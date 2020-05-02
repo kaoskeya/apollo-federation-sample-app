@@ -5,10 +5,24 @@
 **_ensure serverless is installed globally._**
 
 ```
-lerna bootstrap
 cd packages/serverless-app
 yarn start
 ```
+
+## deploy
+
+```
+lerna bootstrap
+cd packages/serverless-app
+
+# to deploy to dev stage
+yarn deploy <aws-profile-name>
+
+# to deploy to a particular stage
+yarn deploy <aws-profile-name> --stage <stage-name>
+```
+
+## about the repo
 
 build a graphql app to illustrate apollo federation with a practical implementation and tests
 

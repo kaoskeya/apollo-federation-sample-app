@@ -9,7 +9,7 @@ const geocoderServer = require("geocoder-server");
 const weatherServer = require("weather-server");
 
 // BASE_URL will be set when deploying to AWS
-const BASE = process.env.BASE_URL || "http://localhost:3000/dev";
+const BASE = process.env.BASE_URL || `http://localhost:3000/${process.env.STAGE}`;
 
 const gateway = new ApolloGateway({
   serviceList: [{
@@ -26,7 +26,7 @@ const gateway = new ApolloGateway({
 const server = new ApolloServer({
   gateway,
   // Disable subscriptions (not currently supported with ApolloGateway)
-  subscriptions: false,
+  subscriptions: false
 });
 
 module.exports.geocoderServer = geocoderServer;
