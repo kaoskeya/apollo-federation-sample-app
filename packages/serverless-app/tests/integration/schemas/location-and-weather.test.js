@@ -1,27 +1,28 @@
 const {
-  gateway
-} = require("../../../servers/index");
-const {
   createTestClient
 } = require("apollo-server-testing");
 
 const {
+  gatewayServer
+} = require("../../../servers");
+
+const {
   query
-} = createTestClient(gateway);
+} = createTestClient(gatewayServer);
 
 const QUERY_SEARCH_WITH_WEATHER = gql `
-query Search($address: String!) {
-  search(address: $address) {
-    latitude
-    longitude
-    weather {
-      title
-      min_temp
-      max_temp
-      the_temp
+  query Search($address: String!) {
+    search(address: $address) {
+      latitude
+      longitude
+      weather {
+        title
+        min_temp
+        max_temp
+        the_temp
+      }
     }
   }
-}
 `;
 
 describe("[gql][integration][schema] geocoder and weather", () => {

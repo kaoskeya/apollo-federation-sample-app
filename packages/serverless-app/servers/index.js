@@ -3,21 +3,22 @@ const {
 } = require("apollo-server-lambda");
 const {
   ApolloGateway
-} = require('@apollo/gateway');
+} = require("@apollo/gateway");
 
 const geocoderServer = require("geocoder-server");
-const weatherServer = require("weather-server")
+const weatherServer = require("weather-server");
 
-const BASE = process.env.BASE_URL || "http://localhost:3000/dev"
+// BASE_URL will be set when deploying to AWS
+const BASE = process.env.BASE_URL || "http://localhost:3000/dev";
 
 const gateway = new ApolloGateway({
   serviceList: [{
-      name: 'geocoder',
-      url: `${BASE}/geocoder`
+      name: "geocoder",
+      url: `${BASE}/geocoder`,
     },
     {
-      name: 'weather',
-      url: `${BASE}/weather`
+      name: "weather",
+      url: `${BASE}/weather`,
     },
   ],
 });
@@ -30,4 +31,4 @@ const server = new ApolloServer({
 
 module.exports.geocoderServer = geocoderServer;
 module.exports.weatherServer = weatherServer;
-module.exports.gateway = server.createHandler();
+module.exports.gatewayServer = server.createHandler();

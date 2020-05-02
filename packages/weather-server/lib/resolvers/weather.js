@@ -11,15 +11,14 @@ const resolvers = {
       weather(latitude, longitude),
   },
   Location: {
-    weather: (a, b, {
+    weather: ({
+      latitude,
+      longitude
+    }, _, {
       dataSources: {
         weather
       }
-    }) => {
-      console.log(JSON.stringify(a));
-      console.log(JSON.stringify(b));
-      return weather(a.latitude, a.longitude);
-    },
+    }) => weather(latitude, longitude),
   },
 };
 

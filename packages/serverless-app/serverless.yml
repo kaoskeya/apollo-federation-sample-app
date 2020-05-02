@@ -11,18 +11,18 @@ functions:
     handler: servers.geocoderServer
     events:
       - http:
-          path: geocoder
+          path: /geocoder
           method: post
           cors: true
   weather:
     handler: servers.weatherServer
     events:
       - http:
-          path: weather
+          path: /weather
           method: post
           cors: true
   gateway:
-    handler: servers.gateway
+    handler: servers.gatewayServer
     events:
       - http:
           path: /
