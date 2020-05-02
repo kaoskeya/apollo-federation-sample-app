@@ -19,4 +19,4 @@ const server = new ApolloServer({
   dataSources
 });
 
-module.exports = server;
+module.exports = server.createHandler();

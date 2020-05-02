@@ -1,7 +1,15 @@
 {
-  "name": "root",
+  "name": "apollo-federation-sample-app",
   "private": true,
   "devDependencies": {
     "lerna": "^3.20.2"
-  }
+  },
+  "scripts": {
+    "test": "lerna run test --since",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

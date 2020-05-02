@@ -1,0 +1,17 @@
+service: apollo-federation-sample-app
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  geocoder:
+    handler: servers.geocoderServer
+    events:
+      - http:
+          path: geocoder
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline
