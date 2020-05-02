@@ -14,8 +14,8 @@ describe("[datasource] weather", () => {
     expect(response.woeid).toBe(testData[0].woeid);
     expect(response.title).toBe(testData[0].title);
 
-    expect(response.consolidated_weather[0].min_temp).not.toBeNaN();
-    expect(response.consolidated_weather[0].max_temp).not.toBeNaN();
-    expect(response.consolidated_weather[0].the_temp).not.toBeNaN();
+    expect(response.min_temp).not.toBeNaN();
+    expect(response.max_temp).not.toBeNaN();
+    expect(response.the_temp).not.toBeNaN();
   });
 });

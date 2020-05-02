@@ -8,7 +8,11 @@ const weather = async (latitude, longitude) => {
     const weatherResponse = await fetch(`https://www.metaweather.com/api/location/${woeJson[0].woeid}`);
     const weatherJson = await weatherResponse.json();
 
-    return weatherJson[0];
+    return {
+      ...weatherJson.consolidated_weather[0],
+      title: weatherJson.title,
+      woeid: weatherJson.woeid,
+    }
   } catch (e) {
     // log to a service for further inspection
     return {
