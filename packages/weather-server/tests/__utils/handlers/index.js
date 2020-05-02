@@ -1,6 +1,6 @@
 const {
-  ApolloServer,
-} = require('apollo-server-lambda');
+  ApolloServer
+} = require("apollo-server-lambda");
 const {
   buildFederatedSchema
 } = require("@apollo/federation");

@@ -1,3 +1,3 @@
-const geocoderServer = require("geocoder-server/lib/handlers/index");
+const geocoderServer = require("geocoder-server");
 
 module.exports.geocoderServer = geocoderServer;

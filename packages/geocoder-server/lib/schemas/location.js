@@ -4,7 +4,7 @@ const {
 } = require("apollo-server-lambda");
 
 const typeDefs = gql `
-  type Location {
+  type Location @key(fields: ["latitude", "longitude"]) {
     latitude: Float
     longitude: Float
   }

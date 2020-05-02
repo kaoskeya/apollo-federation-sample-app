@@ -24,7 +24,7 @@ describe("[datasource] geocoder", () => {
 
   it("return 0, 0 for an invalid address", async () => {
     // sleep to avoid rate limitting issue
-    await sleep(3000);
+    await sleep(5000);
     const response = await geocoder(testData[1].address);
 
     expect(response.latitude).toBe(testData[1].latitude);

@@ -1,0 +1,33 @@
+{
+  "name": "weather-server",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Karthikeyan S <k@kaos.agency>",
+  "homepage": "https://github.com/kaoskeya/apollo-federation-sample-app#readme",
+  "license": "ISC",
+  "main": "lib/handlers/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaoskeya/apollo-federation-sample-app.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/kaoskeya/apollo-federation-sample-app/issues"
+  },
+  "devDependencies": {
+    "jest": "^25.5.3"
+  },
+  "dependencies": {
+    "@apollo/federation": "^0.14.1",
+    "apollo-server-lambda": "^2.12.0"
+  }
+}
