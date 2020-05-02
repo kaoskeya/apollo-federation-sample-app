@@ -1,12 +1,7 @@
-const {
-  ApolloServer,
-  gql
-} = require("apollo-server-lambda");
+const { ApolloServer, gql } = require("apollo-server-lambda");
 
-const typeDefs = gql `
+const typeDefs = gql`
   type Weather {
-    latitude: Float @external
-    longitude: Float @external
     title: String
     min_temp: Float
     max_temp: Float
@@ -14,6 +9,8 @@ const typeDefs = gql `
   }
 
   extend type Location @key(fields: ["latitude", "longitude"]) {
+    latitude: Float @external
+    longitude: Float @external
     weather: Weather
   }
 
