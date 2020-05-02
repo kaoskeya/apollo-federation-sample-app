@@ -1,0 +1,26 @@
+{
+  "name": "geocoder",
+  "version": "0.0.0",
+  "description": "code to convert location to geo code",
+  "author": "Karthikeyan S <k@kaos.agency>",
+  "homepage": "https://github.com/kaoskeya/apollo-federation-sample-app#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaoskeya/apollo-federation-sample-app.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/kaoskeya/apollo-federation-sample-app/issues"
+  }
+}

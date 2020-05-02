@@ -1,4 +1,4 @@
-### apollo-federation-sample-app
+# apollo-federation-sample-app
 
 build a graphql app to illustrate apollo federation with a practical implementation
 
@@ -6,9 +6,9 @@ the app will allow the user to enter a location, geo code it, get the weather an
 
 free api's which do not require an API key will be used for easier forking and running:
 
-- Geocoding: https://geocode.xyz/
-- Weather: https://www.metaweather.com/api/
-- Sunrise/Sunset: https://sunrise-sunset.org/api
+- geocoding: https://geocode.xyz/
+- weather: https://www.metaweather.com/api/
+- sunrise/sunset: https://sunrise-sunset.org/api
 
 react will be used for the front end.
 lerna to organise code into different packages.
