@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/kaoskeya/apollo-federation-sample-app/compare/v0.0.9...v0.0.10) (2020-05-02)
+
+**Note:** Version bump only for package apollo-federation-sample-app
+
+
+
+
+
 ## [0.0.9](https://github.com/kaoskeya/apollo-federation-sample-app/compare/v0.0.8...v0.0.9) (2020-05-02)
 
 **Note:** Version bump only for package apollo-federation-sample-app
