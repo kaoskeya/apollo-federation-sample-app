@@ -15,6 +15,7 @@ const weather = async (latitude, longitude) => {
     }
   } catch (e) {
     // log to a service for further inspection
+    console.log(e);
     return {
       title: "Unknown",
       min_temp: 0,

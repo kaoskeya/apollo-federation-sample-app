@@ -3,6 +3,8 @@ service: apollo-federation-sample-app
 provider:
   name: aws
   runtime: nodejs12.x
+  region: ap-south-1
+  stage: ${opt:stage, 'dev'}
 
 functions:
   geocoder:
@@ -19,6 +21,27 @@ functions:
           path: weather
           method: post
           cors: true
+  gateway:
+    handler: servers.gateway
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
+
+environment:
+  BASE_URL:
+    {
+      "Fn::Join":
+        [
+          "",
+          [
+            " https://",
+            { "Ref": "ApiGatewayRestApi" },
+            ".execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}",
+          ],
+        ],
+    }
 
 plugins:
   - serverless-offline

@@ -19,12 +19,13 @@
   },
   "scripts": {
     "start": "sls offline start",
-    "test": "echo \"no tests for this package\""
+    "test": "jest"
   },
   "bugs": {
     "url": "https://github.com/kaoskeya/apollo-federation-sample-app/issues"
   },
   "dependencies": {
+    "@apollo/gateway": "^0.14.1",
     "geocoder-server": "^0.0.3",
     "weather-server": "^0.0.3"
   },

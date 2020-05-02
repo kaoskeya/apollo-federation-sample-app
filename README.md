@@ -18,7 +18,7 @@ free api's which do not require an API key will be used for easier forking and r
 
 - geocoding: https://geocode.xyz/
 - weather: https://www.metaweather.com/api/
-- sunrise/sunset: https://sunrise-sunset.org/api
+- sunrise/sunset: https://sunrise-sunset.org/api [TODO]
 
 lerna to organise code into different packages.
 
@@ -28,6 +28,6 @@ sample app deployment will be done to AWS lambda.
 
 you should be able to run the app locally as mentioned above.
 
-## wip
+### TODO
 
 react app for the front end.
